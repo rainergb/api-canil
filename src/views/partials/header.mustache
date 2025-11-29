@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{pageTitle}} - Canil</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>🐕 Canil</h1>
+            <form action="/" method="GET" class="search-form">
+                <input 
+                    type="text" 
+                    name="q" 
+                    placeholder="Buscar por raça..." 
+                    value="{{searchQuery}}"
+                    class="search-input"
+                />
+                <button type="submit" class="search-button">Buscar</button>
+            </form>
+        </div>
+    </header>
+    
+    <section class="filters">
+        <div class="container">
+            <div class="category-filters">
+                <a href="/" class="filter-btn {{#isAll}}active{{/isAll}}">Todos</a>
+                <a href="/dogs" class="filter-btn {{#isDog}}active{{/isDog}}">🐕 Cachorros</a>
+                <a href="/cats" class="filter-btn {{#isCat}}active{{/isCat}}">🐈 Gatos</a>
+                <a href="/fishes" class="filter-btn {{#isFish}}active{{/isFish}}">🐠 Peixes</a>
+            </div>
+        </div>
+    </section>
+    
+    <main class="container">
