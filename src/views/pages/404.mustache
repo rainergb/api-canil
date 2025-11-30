@@ -1,0 +1,22 @@
+{{>partials/header}}
+
+<section class="not-found">
+    <div class="not-found-content">
+        <h1 class="not-found-title">😢 Oops!</h1>
+        <h2 class="not-found-subtitle">Nenhum animal encontrado</h2>
+        <p class="not-found-text">
+            {{#searchQuery}}
+                Não encontramos nenhum animal com o termo "<strong>{{searchQuery}}</strong>".
+            {{/searchQuery}}
+            {{^searchQuery}}
+                A página que você está procurando não existe.
+            {{/searchQuery}}
+        </p>
+        <div class="not-found-actions">
+            <a href="/" class="btn-primary">Ver todos os animais</a>
+            <a href="/dogs" class="btn-secondary">Ver cachorros</a>
+        </div>
+    </div>
+</section>
+
+{{>partials/footer}}
